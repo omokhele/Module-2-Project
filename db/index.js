@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+dotenv.config()
 
-let MONGODB_URI = process.env.PROD_MONGODB || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/countriesDatabase'
+// let MONGODB_URI = process.env.PROD_MONGODB || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/countriesDatabase'
 
-mongoose.connect(MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true}).then(() => {
+mongoose.connect(process.env.MONGODB_URL, {useUnifiedTopology: true, useNewUrlParser: true}).then(() => {
     console.log('Successfully connected to MongoDB')
 }).catch(e => {
     console.error('Connection error, e.message')
