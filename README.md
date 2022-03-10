@@ -102,7 +102,7 @@ output
 The database was connected to MongoDB Atlas and hosted unto the heroku platform. A .env and .gitignore file was also created.
 
 Here is [countries database api](https://arcane-springs-77163.herokuapp.com/countries "Countries Database") hosted on the Heroku platform.
-
+---
 ### **Technologies**
 
 The API was created using Express, MongoDB, Node.JS and Mongoose.
