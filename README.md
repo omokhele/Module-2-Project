@@ -103,5 +103,6 @@ The database was connected to MongoDB Atlas and hosted unto the heroku platform.
 
 Here is [countries database api](https://arcane-springs-77163.herokuapp.com/countries "Countries Database") hosted on the Heroku platform.
 
+**TechnologiesExpress, MongoDB, Node.JS and Mongoose**
 
 *Thank you.*
