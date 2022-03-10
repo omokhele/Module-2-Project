@@ -2,7 +2,7 @@
 
 ![Flag Logo](https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag-map_of_the_world_%282017%29.png)
 
-My Module 2 project is a countries database that gives an overview of countries across the habitable continents of the world. Included in my database a country as a representation of each habitable continent.
+My Module 2 project is a countries database api that gives an overview of countries across the habitable continents of the world. Included in my database a country as a representation of each habitable continent.
 ___
 
 ## Installation Instructions
@@ -52,6 +52,23 @@ In each of these repositories, .js file were created to handle different functio
 - Different parameters were defined using multiple data types.
 - Four Schema .js files were used in this database. Three out of four files referenced each other.
 
+country schema
+>`const Country = new Schema(
+    {
+        name: {type: String, required: true},
+        continent: {type: String, ref:'continents'},
+        president: {type: String, ref:'presidents'},
+        flag: {type: String, required: true},
+        population: {type: Number, ref: 'populations'},
+        capital: {type: String, ref: 'capitals'},
+        created: {type: Date, required: true},
+        gdp: {type: String, required: true},
+        private: {type: Boolean, required: false}
+    },
+    {timestamps: true},
+)`
+
+country array
 >`{
 name: 'Nigeria', 
 continent: continent1.name, 
@@ -63,6 +80,7 @@ gdp: '$478.5 billion',
 created: 10-1-1960
 },`
 
+output
 >`{
       "_id": "6228d8a7c2f280e548d51dbc",
       "name": "China",
@@ -83,7 +101,7 @@ created: 10-1-1960
 ## Hosting the Database
 The database was connected to MongoDB Atlas and hosted unto the heroku platform. A .env and .gitignore file was also created.
 
-Here is [countries database](https://arcane-springs-77163.herokuapp.com/countries "Countries Database") hosted on the Heroku platform.
+Here is [countries database api](https://arcane-springs-77163.herokuapp.com/countries "Countries Database") hosted on the Heroku platform.
 
 
 *Thank you.*
